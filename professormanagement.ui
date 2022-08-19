@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>ProfessorManagement</class>
+ <widget class="QDialog" name="ProfessorManagement">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1326</width>
+    <height>973</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true"/>
+  </property>
+  <widget class="QPushButton" name="addProfessorBtn">
+   <property name="geometry">
+    <rect>
+     <x>620</x>
+     <y>50</y>
+     <width>151</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>增加评委</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="delteProfessor">
+   <property name="geometry">
+    <rect>
+     <x>830</x>
+     <y>50</y>
+     <width>161</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>删除评委</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="queryBtn">
+   <property name="geometry">
+    <rect>
+     <x>390</x>
+     <y>50</y>
+     <width>131</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>查询</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="lineEdit">
+   <property name="geometry">
+    <rect>
+     <x>160</x>
+     <y>50</y>
+     <width>181</width>
+     <height>51</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="submitBtn">
+   <property name="geometry">
+    <rect>
+     <x>860</x>
+     <y>900</y>
+     <width>171</width>
+     <height>61</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>提交</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="cancleBtn">
+   <property name="geometry">
+    <rect>
+     <x>200</x>
+     <y>890</y>
+     <width>161</width>
+     <height>71</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>撤销</string>
+   </property>
+  </widget>
+  <widget class="QTableView" name="tableView">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>148</y>
+     <width>1265</width>
+     <height>731</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>50</x>
+     <y>50</y>
+     <width>71</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font: 16pt &quot;Agency FB&quot;;</string>
+   </property>
+   <property name="text">
+    <string>姓名</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_2">
+   <property name="geometry">
+    <rect>
+     <x>-10</x>
+     <y>0</y>
+     <width>1411</width>
+     <height>981</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border-image: url(:/icon/backimage.jpg);</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <zorder>label_2</zorder>
+  <zorder>addProfessorBtn</zorder>
+  <zorder>delteProfessor</zorder>
+  <zorder>queryBtn</zorder>
+  <zorder>submitBtn</zorder>
+  <zorder>cancleBtn</zorder>
+  <zorder>tableView</zorder>
+  <zorder>label</zorder>
+  <zorder>lineEdit</zorder>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>addProfessorBtn</sender>
+   <signal>clicked()</signal>
+   <receiver>ProfessorManagement</receiver>
+   <slot>addSlot()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>475</x>
+     <y>26</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>490</x>
+     <y>0</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>delteProfessor</sender>
+   <signal>clicked()</signal>
+   <receiver>ProfessorManagement</receiver>
+   <slot>deleteSlot()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>622</x>
+     <y>35</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>670</x>
+     <y>57</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>queryBtn</sender>
+   <signal>clicked()</signal>
+   <receiver>ProfessorManagement</receiver>
+   <slot>onFilter()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>373</x>
+     <y>34</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>312</x>
+     <y>28</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>addSlot()</slot>
+  <slot>deleteSlot()</slot>
+  <slot>onFilter()</slot>
+ </slots>
+</ui>

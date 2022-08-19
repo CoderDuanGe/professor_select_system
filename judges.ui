@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Judges</class>
+ <widget class="QDialog" name="Judges">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1265</width>
+    <height>959</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayout">
+     <item>
+      <widget class="QPushButton" name="importDataBtn">
+       <property name="text">
+        <string>导入数据</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="label">
+       <property name="styleSheet">
+        <string notr="true">font: 20pt &quot;Agency FB&quot;;</string>
+       </property>
+       <property name="text">
+        <string>评委信息导入</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="pushButton_2">
+       <property name="text">
+        <string>提交数据</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="pushButton_3">
+       <property name="text">
+        <string>清空数据</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayout_2">
+     <item>
+      <widget class="QTableView" name="tableView"/>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>importDataBtn</sender>
+   <signal>clicked()</signal>
+   <receiver>Judges</receiver>
+   <slot>onImportDataBtnClicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>121</x>
+     <y>45</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>112</x>
+     <y>7</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_2</sender>
+   <signal>clicked()</signal>
+   <receiver>Judges</receiver>
+   <slot>onAddSqLiteClicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>647</x>
+     <y>31</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>650</x>
+     <y>0</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_3</sender>
+   <signal>clicked()</signal>
+   <receiver>Judges</receiver>
+   <slot>onDeleteAllProfessorSqLiteClicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>1252</x>
+     <y>45</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>896</x>
+     <y>64</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>onImportDataBtnClicked()</slot>
+  <slot>onAddSqLiteClicked()</slot>
+  <slot>onDeleteAllProfessorSqLiteClicked()</slot>
+ </slots>
+</ui>
